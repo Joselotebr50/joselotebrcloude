@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JOSELOTEBR | A Alma dos Andes em Cada Melodia</title>
+<meta name="description" content="Espetáculos de Música Andina para eventos, casamentos, hotéis, festivais e apresentações culturais. Uma viagem sonora pelas montanhas dos Andes.">
+
+<meta property="og:title" content="JOSELOTEBR | A Alma dos Andes em Cada Melodia">
+<meta property="og:description" content="Espetáculos de Música Andina para eventos, casamentos, hotéis, festivais e apresentações culturais.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link rel="icon" type="image/jpeg" href="assets/img/logo-full.jpg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Barra de progresso do condor -->
+<div class="condor-progress" aria-hidden="true">
+  <svg class="condor-track" viewBox="0 0 1200 40" preserveAspectRatio="none">
+    <path class="track-line" d="M0,20 L1200,20"></path>
+  </svg>
+  <div class="condor-marker" id="condorMarker">
+    <svg viewBox="0 0 100 40" class="condor-icon"><path d="M50 20 C 35 5, 15 8, 0 18 C 15 15, 30 18, 50 24 C 70 18, 85 15, 100 18 C 85 8, 65 5, 50 20 Z"/></svg>
+  </div>
+</div>
+
+<!--================ MENU ================-->
+<header id="header">
+  <div class="logo">
+    <span class="logo-mark">
+      <img src="assets/img/logo-mark.png" alt="JOSELOTEBR — condor andino com zampoña e quena">
+    </span>
+    <span class="logo-text">JOSELOTEBR</span>
+  </div>
+
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav id="mainNav">
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#espetaculo">Espetáculo</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#videos">Vídeos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <a class="btn-menu" href="https://wa.me/5562991732910" target="_blank" rel="noopener">Agendar Show</a>
+</header>
+
+<!--================ HERO CINEMATOGRÁFICO ================-->
+<section id="inicio" class="hero-scene">
+  <div class="hero-pin">
+
+    <canvas id="starsCanvas" aria-hidden="true"></canvas>
+    <canvas id="particlesCanvas" aria-hidden="true"></canvas>
+
+    <div class="fog fog-1" aria-hidden="true"></div>
+    <div class="fog fog-2" aria-hidden="true"></div>
+
+    <!-- Montanhas fotográficas (parallax) -->
+    <div class="mountains-photo" id="mountainsPhoto"></div>
+    <div class="night-overlay" id="nightOverlay"></div>
+
+    <img class="cloud cloud-1" src="assets/img/nuvens-grupo.png" alt="" aria-hidden="true">
+    <img class="cloud cloud-2" src="assets/img/nuvens-solo.png" alt="" aria-hidden="true">
+    <img class="cloud cloud-3" src="assets/img/nuvens-solo.png" alt="" aria-hidden="true">
+
+    <!-- Condor voador (foto recortada) -->
+    <img class="condor-fly" id="condorFly" src="assets/img/condor-cut.png" alt="" aria-hidden="true">
+
+    <!-- Machu Picchu revelado no avanço do scroll (foto real) -->
+    <img class="machu-picchu" id="machuPicchu" src="assets/img/machu-picchu.jpg" alt="Machu Picchu ao amanhecer">
+
+    <!-- Retrato -->
+    <div class="jose-portrait" id="josePortrait">
+      <div class="portrait-frame">
+        <img src="assets/img/jose-quena.jpg" alt="JOSELOTEBR tocando quena com Machu Picchu ao fundo" id="joseImg">
+        <div class="portrait-placeholder" aria-hidden="true">
+          <i class="fa-solid fa-music"></i>
+        </div>
+      </div>
+      <div class="portrait-glow"></div>
+    </div>
+
+    <div class="hero-content" id="heroContent">
+      <h1>JOSELOTEBR</h1>
+      <h2>A Música dos Andes que emociona, conecta e transforma.</h2>
+      <div class="hero-buttons">
+        <a href="https://wa.me/5562991732910" class="btn-primary" target="_blank" rel="noopener">Agende uma Apresentação</a>
+        <a href="#videos" class="btn-secondary">Assistir Apresentação</a>
+      </div>
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true">
+      <span>role para viajar pelos Andes</span>
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </div>
+</section>
+
+<div class="chakana-divider" aria-hidden="true"><svg viewBox="0 0 60 60"><path d="M30 10 L36 16 L36 24 L44 24 L50 30 L44 36 L36 36 L36 44 L30 50 L24 44 L24 36 L16 36 L10 30 L16 24 L24 24 L24 16 Z"/></svg></div>
+
+<!--================ SOBRE ================-->
+<section id="sobre" class="reveal-section has-bg-video">
+  <video class="sobre-video" autoplay muted loop playsinline poster="assets/img/jose-retrato.jpg">
+    <source src="assets/video/sobre-bg.mp4" type="video/mp4">
+  </video>
+  <div class="sobre-video-overlay" aria-hidden="true"></div>
+  <div class="container sobre-grid">
+    <div class="texto reveal-up">
+      <span class="eyebrow">Quem é</span>
+      <h2>JOSELOTEBR</h2>
+      <p>Artista peruano radicado no Brasil, dedicado à preservação e divulgação da música tradicional dos Andes. Sua apresentação une emoção, cultura, espiritualidade e excelência musical.</p>
+      <p>Cada espetáculo é uma viagem sonora pelas montanhas andinas, criando uma atmosfera única para qualquer evento.</p>
+    </div>
+    <div class="foto reveal-up delay-1">
+      <div class="foto-frame">
+        <img src="assets/img/jose-retrato.jpg" alt="JOSELOTEBR, artista peruano radicado no Brasil" id="sobreImg">
+        <div class="foto-placeholder" aria-hidden="true"><i class="fa-solid fa-mountain-sun"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="chakana-divider" aria-hidden="true"><svg viewBox="0 0 60 60"><path d="M30 10 L36 16 L36 24 L44 24 L50 30 L44 36 L36 36 L36 44 L30 50 L24 44 L24 36 L16 36 L10 30 L16 24 L24 24 L24 16 Z"/></svg></div>
+
+<!--================ ESPETÁCULO ================-->
+<section id="espetaculo" class="reveal-section has-bg-video">
+  <video class="section-video" autoplay muted loop playsinline poster="assets/img/jose-quena.jpg">
+    <source src="assets/video/espetaculo-bg.mp4" type="video/mp4">
+  </video>
+  <div class="section-video-overlay top-fade" aria-hidden="true"></div>
+  <canvas class="section-particles" data-section="espetaculo" aria-hidden="true"></canvas>
+  <div class="section-content">
+    <span class="eyebrow center">Uma Experiência</span>
+    <h2 class="center">O Espetáculo</h2>
+    <div class="cards">
+      <div class="card reveal-up">
+        <i class="fa-solid fa-mountain"></i>
+        <h3>Música Andina</h3>
+        <p>Clássicos tradicionais dos Andes, tocados com respeito à sua origem ancestral.</p>
+      </div>
+      <div class="card reveal-up delay-1">
+        <i class="fa-solid fa-wind"></i>
+        <h3>Instrumental</h3>
+        <p>Quena, zampoña, charango e instrumentos tradicionais em execução ao vivo.</p>
+      </div>
+      <div class="card reveal-up delay-2">
+        <i class="fa-solid fa-heart"></i>
+        <h3>Eventos</h3>
+        <p>Casamentos, festivais, hotéis, prefeituras e eventos culturais de todos os portes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="chakana-divider" aria-hidden="true"><svg viewBox="0 0 60 60"><path d="M30 10 L36 16 L36 24 L44 24 L50 30 L44 36 L36 36 L36 44 L30 50 L24 44 L24 36 L16 36 L10 30 L16 24 L24 24 L24 16 Z"/></svg></div>
+
+<!--================ GALERIA ================-->
+<section id="galeria" class="reveal-section has-bg-video">
+  <video class="section-video" autoplay muted loop playsinline poster="assets/img/foto1.jpg">
+    <source src="assets/video/galeria-bg.mp4" type="video/mp4">
+  </video>
+  <div class="section-video-overlay top-fade" aria-hidden="true"></div>
+  <canvas class="section-particles" data-section="galeria" aria-hidden="true"></canvas>
+  <div class="section-content">
+    <span class="eyebrow center">Registros</span>
+    <h2 class="center">Galeria</h2>
+    <div class="gallery">
+      <figure class="gallery-item reveal-up"><img src="assets/img/foto1.jpg" alt="Arte JOSELOTEBR — Peru"><div class="gallery-placeholder"><i class="fa-solid fa-image"></i></div></figure>
+      <figure class="gallery-item reveal-up delay-1"><img src="assets/img/foto2.jpg" alt="Apresentação JOSELOTEBR 2"><div class="gallery-placeholder"><i class="fa-solid fa-image"></i></div></figure>
+      <figure class="gallery-item reveal-up delay-2"><img src="assets/img/foto3.jpg" alt="Apresentação JOSELOTEBR 3"><div class="gallery-placeholder"><i class="fa-solid fa-image"></i></div></figure>
+      <figure class="gallery-item reveal-up delay-3"><img src="assets/img/foto4.jpg" alt="Apresentação JOSELOTEBR 4"><div class="gallery-placeholder"><i class="fa-solid fa-image"></i></div></figure>
+    </div>
+  </div>
+</section>
+
+<div class="chakana-divider" aria-hidden="true"><svg viewBox="0 0 60 60"><path d="M30 10 L36 16 L36 24 L44 24 L50 30 L44 36 L36 36 L36 44 L30 50 L24 44 L24 36 L16 36 L10 30 L16 24 L24 24 L24 16 Z"/></svg></div>
+
+<!--================ VÍDEOS ================-->
+<section id="videos" class="reveal-section has-bg-video">
+  <video class="section-video" autoplay muted loop playsinline poster="assets/img/machu-picchu.jpg">
+    <source src="assets/video/videos-bg.mp4" type="video/mp4">
+  </video>
+  <div class="section-video-overlay top-fade" aria-hidden="true"></div>
+  <canvas class="section-particles" data-section="videos" aria-hidden="true"></canvas>
+  <div class="section-content">
+    <span class="eyebrow center">Ao Vivo</span>
+    <h2 class="center">Apresentações</h2>
+    <div class="videos">
+      <a class="video-card reveal-up" target="_blank" rel="noopener" href="https://www.instagram.com/p/CQIx9rXB6an/"><i class="fa-brands fa-instagram"></i><span>Vídeo 1</span></a>
+      <a class="video-card reveal-up delay-1" target="_blank" rel="noopener" href="https://www.instagram.com/p/CMa1zbSlGU1/"><i class="fa-brands fa-instagram"></i><span>Vídeo 2</span></a>
+      <a class="video-card reveal-up delay-2" target="_blank" rel="noopener" href="https://www.instagram.com/p/B32_t5yD3C5/"><i class="fa-brands fa-instagram"></i><span>Vídeo 3</span></a>
+      <a class="video-card reveal-up delay-3" target="_blank" rel="noopener" href="https://www.instagram.com/p/B1NcG1VgcCp/"><i class="fa-brands fa-instagram"></i><span>Vídeo 4</span></a>
+      <a class="video-card reveal-up" target="_blank" rel="noopener" href="https://www.instagram.com/p/Bz8Djpng-QL/"><i class="fa-brands fa-instagram"></i><span>Vídeo 5</span></a>
+      <a class="video-card reveal-up delay-1" target="_blank" rel="noopener" href="https://www.instagram.com/p/BxcyPzDAskP/"><i class="fa-brands fa-instagram"></i><span>Vídeo 6</span></a>
+    </div>
+  </div>
+</section>
+
+<div class="chakana-divider" aria-hidden="true"><svg viewBox="0 0 60 60"><path d="M30 10 L36 16 L36 24 L44 24 L50 30 L44 36 L36 36 L36 44 L30 50 L24 44 L24 36 L16 36 L10 30 L16 24 L24 24 L24 16 Z"/></svg></div>
+
+<!--================ CONTATO ================-->
+<section id="contato" class="reveal-section has-bg-video">
+  <video class="section-video" autoplay muted loop playsinline poster="assets/img/jose-retrato.jpg">
+    <source src="assets/video/contato-bg.mp4" type="video/mp4">
+  </video>
+  <div class="section-video-overlay top-fade" aria-hidden="true"></div>
+  <canvas class="section-particles" data-section="contato" aria-hidden="true"></canvas>
+  <div class="section-content">
+    <div class="contato-inner">
+      <span class="eyebrow center">Vamos conversar?</span>
+      <h2 class="center">Leve os Andes ao seu Evento</h2>
+      <p class="center">Leve a magia da música andina para o seu evento.</p>
+      <div class="contact-buttons">
+        <a href="https://wa.me/5562991732910" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        <a href="mailto:joserey@hotmail.com"><i class="fa-solid fa-envelope"></i> E-mail</a>
+        <a href="https://instagram.com/joselotebr" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Instagram</a>
+        <a href="https://youtube.com/@joselotebr" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> YouTube</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 JOSELOTEBR — Todos os direitos reservados.</p>
+</footer>
+
+<!-- WhatsApp flutuante -->
+<a href="https://wa.me/5562991732910" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
